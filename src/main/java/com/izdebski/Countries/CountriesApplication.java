@@ -33,5 +33,8 @@ public class CountriesApplication implements CommandLineRunner {
 		countryRepository.save(new Country("Brazil", "Brasilia"));
 		countryRepository.save(new Country("Egypt", "Cairo"));
 		countryRepository.save(new Country("Nigeria", "Abuja"));
+		countryRepository.save(new Country("Jordan", "Amman"));
+		countryRepository.save(new Country("Curacao", "Willemstad"));
+		countryRepository.save(new Country("Sao Tome Principe", "Sao Tome"));
 	}
 }
