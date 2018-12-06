@@ -2,8 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <script type="text/javascript" src="webjars/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="webjars/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="webjars/jquery/2.2.3/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="webjars/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" th:src="@{js/main.js}"  src="../static/js/main.js"></script>
+
     <link rel="stylesheet"
           href="webjars/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"/>
 </head>
@@ -26,7 +30,7 @@
                     <td th:text="${country.id}"></td>
                     <td th:text="${country.name}"></td>
                     <td th:text="${country.capital}"></td>
-                    <td> <a class="btn btn-primary eBtn">Edit</a></td>
+                    <td> <a th:href="@{findOne/(id=${country.id})}" class="btn btn-primary eBtn">Edit</a></td>
                 </tr>
                 </tbody>
             </table>
